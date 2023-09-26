@@ -1,0 +1,30 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core"
+	controllerName="com.sap.build.eeb1117ce-eu_2.untitledPrototype.controller.FirmaDialog" xmlns:h="http://www.w3.org/1999/xhtml">
+	<Dialog contentWidth="90%" contentHeight="50%"
+		title="Firma"
+		class="firmaDialog">
+		<content>
+			<Page showHeader="false" enableScrolling="false">
+				<content>
+					<h:div id="signature-pad" class="signature-pad">
+						<h:div class="signature-pad--body">
+							<h:canvas/>
+						</h:div>
+					</h:div>
+				</content>
+				<footer>
+					<OverflowToolbar width="100%" design="Auto" enabled="true">
+						<Button text="{i18n>buttonChiudi}" press="onCloseFirma" type="Reject" visible="{= ${dataSource>/firma} !== ''}"/>
+						<!-- <Button text="{i18n>buttonClear}" press="onClearFirma" type="Emphasized" visible="true"/> -->
+						<Button text="{i18n>buttonSave}" press="onSaveFirma" type="Accept"/>
+					</OverflowToolbar>
+				</footer>
+			</Page>
+		</content>
+		<!--	<buttons>
+			<Button text="Chiudi" press="onCloseFirma" type="Reject" visible="{= ${dataSource>/firma} !== ''}"/>
+			<Button text="Clear" press="onClearFirma" type="Emphasized" visible="true"/>
+			<Button text="Salva" press="onSaveFirma" type="Accept"/>
+		</buttons>-->
+	</Dialog>
+</core:FragmentDefinition>

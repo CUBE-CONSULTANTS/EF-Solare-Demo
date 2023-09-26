@@ -1,1 +1,183 @@
-/* Enter your custom styles here */
+footer button:not(.sapMBtnDisabled)>span {
+    background-color: #4356676b !important;
+}
+
+
+.sapMDialog.fullSizeDialog {
+    /*    top: 0% !important;
+    bottom: 0% !important;
+    left: 0% !important;
+    right: 0% !important;
+    max-height: calc(100% - 6rem - 0%) !important;
+    width: 100% !important;
+    max-width: 100%;*/
+}
+
+.dialogFooter: {
+    position: fixed;
+    bottom: 0;
+}
+
+.footerDialog {
+    margin: 1px;
+}
+
+.dialogBeginBtn {
+    left: 0 !important;
+    position: absolute !important;
+}
+
+.dialogEndBtn {
+    right: 0 !important;
+    position: absolute !important;
+}
+
+.listaMateriali {
+    padding: 0 0.5rem !important;
+}
+
+.vBoxButtonDialog> :last-child {
+    position: absolute;
+    /* bottom: 40%; */
+    right: 0;
+}
+
+.vBoxButton {
+    padding-top: 1rem;
+    /*height: 15rem;*/
+
+}
+
+.vBoxButton> :last-child {
+    position: absolute;
+    bottom: 40%;
+    right: 0;
+}
+
+.listContainer> :last-child {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+.deleteIcon {
+    padding-top: 1rem;
+}
+
+.interCompanyIcon {
+    top: 0;
+    padding-top: 1px;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.gridNoMargin {
+    padding: 0 !important;
+}
+
+.gridNoMargin>div {
+    margin: 0 !important;
+}
+
+.gridNoMargin .sapUiRespGridSpanS6 {
+    /*width: 45%;
+    width: -webkit-calc(50% - 1rem);
+    width: calc(50% - 1rem);*/
+    width: calc(50%) !important;
+}
+
+.paddingLeft05rem {
+    padding-left: 0.5rem !important;
+}
+
+.paddingRight05rem {
+    padding-right: 0.5rem !important;
+}
+
+.signature-pad {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 10px;
+    width: 99%;
+    height: 99%;
+    /* max-width: 700px; */
+    /* max-height: 460px; */
+    border: 1px solid #e8e8e8;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.08) inset;
+    border-radius: 4px;
+}
+
+.signature-pad--body {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    border: 1px solid #f4f4f4;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.signature-pad--body canvas {
+    /*position: absolute;*/
+    left: 0;
+    top: 0;
+    height: 100% !important;
+    width: 100% !important;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.02) inset;
+}
+
+.firmaDialog .sapMBtnInner.sapMBtnText {
+    padding-left: 0.50rem;
+    padding-right: 0.50rem;
+}
+
+.firmaDialog .sapMDialogScrollCont {
+    height: 100% !important;
+    padding: 0 !important;
+}
+.clasPas{
+    padding-bottom: 5% !important; 
+}
+.clasTop{
+    padding-bottom: 0 !important; 
+}
+.classText{
+    font-size: medium !important;
+}
+/* 
+.signature-pad::before,
+.signature-pad::after {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    width: 40%;
+    height: 10px;
+    bottom: 10px;
+    background: transparent;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.signature-pad::before {
+    left: 20px;
+    -webkit-transform: skew(-3deg) rotate(-3deg);
+    transform: skew(-3deg) rotate(-3deg);
+}
+
+.signature-pad::after {
+    right: 20px;
+    -webkit-transform: skew(3deg) rotate(3deg);
+    transform: skew(3deg) rotate(3deg);
+}
+*/

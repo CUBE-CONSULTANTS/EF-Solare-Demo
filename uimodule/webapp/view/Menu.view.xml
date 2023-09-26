@@ -1,0 +1,252 @@
+<mvc:View xmlns:f="sap.f"
+	xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.eeb1117ce-eu_2.untitledPrototype.controller.Menu"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout">
+	<Page showFooter="false" id="myPage" title="Home" class="red">
+		<content>
+			<l:Grid class="sapUiSmallMarginTop" defaultSpan="L12 M6 S11">
+				<VBox alignItems="Center" direction="Column" width="auto" height="auto" justifyContent="Center">
+					<items>
+						<Image src=" ./resources/Logo.png" height="80px" width="150px" densityAware="true"/>
+					</items>
+					<layoutData/>
+				</VBox>
+			</l:Grid>
+			<VBox alignItems="Center" direction="Column" width="auto" height="auto" justifyContent="Center">
+				<items>
+					<HBox width="auto" height="auto" justifyContent="SpaceAround" class="sapUiTinyMarginEnd">
+						<items>
+							<l:Grid class="sapUiNoMarginTop" defaultSpan="L6 M6 S6">
+								<VBox alignItems="Center" direction="Column" width="auto" height="105.00000762939453px" justifyContent="Center" class="sapUiTinyMarginBegin sapUiSmallMarginEnd">
+									<items>
+										<Image src="./resources/info.png" height="50px" width="51px" press="_onImageTap" alt="IM"/>
+										<Title text="{i18n>titleInfoMat}" titleStyle="H5" width="110px" textAlign="Center" wrapping="true"/>
+									</items>
+									<layoutData/>
+								</VBox>
+								<VBox alignItems="Center" direction="Column" width="auto" height="105.00000762939453px" justifyContent="Center" class="sapUiTinyMarginBegin sapUiSmallMarginEnd">
+									<items>
+										<Image src="./resources/List.png" height="auto" width="35px" press="_onImageTap" alt="SK" class="sapUiSmallMarginTop"/>
+										<!--<FlexBox class="sapUiSmallMarginBottom">-->
+										<Title text="Trasf. a Stock Bloccato" titleStyle="H5" width="110px" textAlign="Center" wrapping="true" class="sapUiSmallMarginTop "/>
+										<!--</FlexBox>-->
+									</items>
+									<layoutData/>
+								</VBox>
+							</l:Grid>
+						</items>
+						<layoutData/>
+					</HBox>
+					<VBox alignItems="Center" direction="Column" width="auto" height="auto" justifyContent="Center">
+						<items>
+							<HBox width="auto" height="auto" justifyContent="SpaceAround" class="sapUiTinyMarginEnd">
+								<items>
+									<l:Grid class="sapUiNoMarginTop" defaultSpan="L6 M6 S6">
+										<VBox alignItems="Center" direction="Column" width="auto" height="105.00000762939453px" justifyContent="Center" class="sapUiTinyMarginBegin sapUiSmallMarginEnd">
+											<items>
+												<Image src="./resources/Prelievo_2.png" height="auto" width="60px" press="_onImageTap" alt="TM"/>
+												<Title text="{i18n>titlePrelievoManu}" titleStyle="H5" width="110px" textAlign="Center" wrapping="true"/>
+											</items>
+											<layoutData/>
+										</VBox>
+										<VBox alignItems="Center" direction="Column" width="auto" height="105.00000762939453px" justifyContent="Center" class="sapUiTinyMarginBegin sapUiSmallMarginEnd">
+											<items>
+												<Image src="./resources/Rientro_2.png" height="auto" width="60px" press="_onImageTap" alt="INM"/>
+												<Title text="{i18n>titleRientroManu}" titleStyle="H5" width="110px" textAlign="Center" wrapping="true"/>
+											</items>
+											<layoutData/>
+										</VBox>
+									</l:Grid>
+								</items>
+								<layoutData/>
+							</HBox>
+						</items>
+						<layoutData/>
+					</VBox>
+				</items>
+				<layoutData/>
+			</VBox>
+			
+			<!-- <VBox alignItems="Center" direction="Column" width="auto" height="auto" justifyContent="Center">
+				<items>
+					<HBox width="auto" height="auto" justifyContent="SpaceAround" class="sapUiTinyMarginEnd">
+						<items>
+							<l:Grid class="sapUiNoMarginTop" hSpacing="2" defaultSpan="L6 M6 S6">
+								<VBox alignItems="Center" direction="Column" width="auto" height="105.00000762939453px" justifyContent="Center" class="sapUiSmallMarginEnd">
+									<items>
+										<Image src="./resources/uscitaMerciBW_X.png" height="auto" width="60px" press="_onImageTap" alt="AM"/>
+										<FlexBox class="sapUiNoMarginBottom">
+											<Title text="{i18n>titlereso}" titleStyle="H5" width="130px" textAlign="Center" wrapping="true"/>
+										</FlexBox>
+									</items>
+									<layoutData/>
+								</VBox>
+								<VBox alignItems="Center" direction="Column" width="auto" height="105.00000762939453px" justifyContent="Center" class="sapUiTinyMarginBegin sapUiSmallMarginEnd ">
+									<items>
+										<Image src="./resources/conteggioBW_X.png" height="auto" width="60px" press="_onImageTap" alt="IV"/>
+										<FlexBox class="sapUiSmallMarginBottom">
+											<Title text="{i18n>titleConteggio}" titleStyle="H5" width="auto" textAlign="Center" wrapping="false"/>
+										</FlexBox>
+									</items>
+									<layoutData/>
+								</VBox>
+							</l:Grid>
+						</items>
+						<layoutData/>
+					</HBox>
+				</items>
+				<layoutData/>
+			</VBox> -->
+			<VBox alignItems="Center" direction="Column" width="auto" height="auto" justifyContent="Center">
+				<items>
+					<HBox width="auto" height="auto" justifyContent="SpaceAround" class="sapUiTinyMarginEnd">
+						<items>
+							<l:Grid class="sapUiNoMarginTop" defaultSpan="L6 M6 S6">
+								<VBox alignItems="Center" direction="Column" width="auto" height="105.00000762939453px" justifyContent="Center" class="sapUiTinyMarginBegin sapUiSmallMarginEnd">
+									<items>
+										
+										<Image src="./resources/infoMaterialeBW_X.png" height="70px" width="71px" press="_onImageTap" alt="RECMAG"/>
+										<Title text="Recezione a Magazzino" titleStyle="H5" width="110px" textAlign="Center" wrapping="true"/>
+									</items>
+									<layoutData/>
+								</VBox>
+								<VBox alignItems="Center" direction="Column" width="auto" height="105.00000762939453px" justifyContent="Center" class="sapUiTinyMarginBegin sapUiSmallMarginEnd">
+									<items>
+										<Image src="./resources/List.png" height="auto" width="35px" press="_onImageTap" alt="PREIMP" class="sapUiSmallMarginTop"/>
+										<!--<FlexBox class="sapUiSmallMarginBottom">-->
+										<Title text="Prelievo per Impegno" titleStyle="H5" width="110px" textAlign="Center" wrapping="true" class="sapUiSmallMarginTop "/>
+										<!--</FlexBox>-->
+									</items>
+									<layoutData/>
+								</VBox>
+							</l:Grid>
+						</items>
+						<layoutData/>
+					</HBox>
+					<VBox alignItems="Center" direction="Column" width="auto" height="auto" justifyContent="Center">
+						<items>
+							<HBox width="auto" height="auto" justifyContent="SpaceAround" class="sapUiTinyMarginEnd">
+								<items>
+									<l:Grid class="sapUiNoMarginTop" defaultSpan="L6 M6 S6">
+										<VBox alignItems="Center" direction="Column" width="auto" height="105.00000762939453px" justifyContent="Center" class="sapUiTinyMarginBegin sapUiSmallMarginEnd">
+											<items>
+												<Image src="./resources/Prelievo_2.png" height="auto" width="60px" press="_onImageTap" alt="RICRESO"/>
+												<Title text="Riconsegna da Reso" titleStyle="H5" width="110px" textAlign="Center" wrapping="true"/>
+											</items>
+											<layoutData/>
+										</VBox>
+										<VBox alignItems="Center" direction="Column" width="auto" height="105.00000762939453px" justifyContent="Center" class="sapUiTinyMarginBegin sapUiSmallMarginEnd">
+											<items>
+												<Image src="./resources/Rientro_2.png" height="auto" width="60px" press="_onImageTap" alt="INVRIENTR"/>
+												<Title text="Invio-Rientro Ripar. fuori Gar." titleStyle="H5" width="110px" textAlign="Center" wrapping="true"/>
+											</items>
+											<layoutData/>
+										</VBox>
+									</l:Grid>
+								</items>
+								<layoutData/>
+							</HBox>
+						</items>
+						<layoutData/>
+					</VBox>
+				</items>
+				<layoutData/>
+			</VBox>
+			<!--  -->
+			<VBox alignItems="Center" direction="Column" width="auto" height="auto" justifyContent="Center">
+				<items>
+					<HBox width="auto" height="auto" justifyContent="SpaceAround" class="sapUiTinyMarginEnd">
+						<items>
+							<l:Grid class="sapUiNoMarginTop" defaultSpan="L6 M6 S6">
+								<VBox alignItems="Center" direction="Column" width="auto" height="105.00000762939453px" justifyContent="Center" class="sapUiTinyMarginBegin sapUiSmallMarginEnd">
+									<items>
+										<Image src="./resources/infoMaterialeBW_X.png" height="70px" width="71px" press="_onImageTap" alt="INVRIPG"/>
+										<Title text="Invio Ripar. in Garanz." titleStyle="H5" width="110px" textAlign="Center" wrapping="true"/>
+									</items>
+									<layoutData/>
+								</VBox>
+								<VBox alignItems="Center" direction="Column" width="auto" height="105.00000762939453px" justifyContent="Center" class="sapUiTinyMarginBegin sapUiSmallMarginEnd">
+									<items>
+										<Image src="./resources/List.png" height="auto" width="35px" press="_onImageTap" alt="RIENTRIPG" class="sapUiSmallMarginTop"/>
+										<!--<FlexBox class="sapUiSmallMarginBottom">-->
+										<Title text="Rientro Ripar. in Garanz." titleStyle="H5" width="110px" textAlign="Center" wrapping="true" class="sapUiSmallMarginTop "/>
+										<!--</FlexBox>-->
+									</items>
+									<layoutData/>
+								</VBox>
+							</l:Grid>
+						</items>
+						<layoutData/>
+					</HBox>
+				</items>
+				<layoutData/>
+			</VBox>
+			<!--  -->
+			<VBox alignItems="Center" direction="Column" width="auto" height="auto" justifyContent="Center">
+				<items>
+					<HBox width="auto" height="auto" justifyContent="SpaceAround" class="sapUiTinyMarginEnd">
+						<items>
+							<l:Grid class="sapUiNoMarginTop" defaultSpan="L6 M6 S6">
+								<VBox alignItems="Center" direction="Column" width="auto" height="105.00000762939453px" justifyContent="Center" class="sapUiTinyMarginBegin sapUiSmallMarginEnd">
+									<items>
+										<Image src="./resources/inventory.png" height="auto" width="60px" press="_onImageTap" alt="INVETN"/>
+										<FlexBox class="sapUiNoMarginBottom">
+											<Title text="Inventario" titleStyle="H5" width="130px" textAlign="Center" wrapping="true"/>
+										</FlexBox>
+									</items>
+								</VBox>
+								<VBox alignItems="Center" direction="Column" width="auto" height="105.00000762939453px" justifyContent="Center" class="sapUiTinyMarginBegin sapUiSmallMarginEnd">
+									<items>
+										<Image src="" height="auto" width="35px" press="" alt="" class="sapUiSmallMarginTop"/>
+										<Title text="" titleStyle="H5" width="110px" textAlign="Center" wrapping="true" class="sapUiSmallMarginTop "/>
+									</items>
+									<layoutData/>
+								</VBox>
+							</l:Grid>
+						</items>
+						<layoutData/>
+					</HBox>
+				</items>
+				<layoutData/>
+			</VBox>
+			<!--  -->
+			<!-- <VBox alignItems="Center" direction="Column" width="auto" height="auto" justifyContent="Center">
+				<items>
+					<HBox width="auto" height="auto" justifyContent="Center" class="sapUiTinyMarginEnd">
+						<items>
+							<l:Grid class="sapUiNoMarginTop" hSpacing="2" defaultSpan="L6 M6 S6">
+								<VBox alignItems="Center" direction="Column" width="auto" height="105.00000762939453px" justifyContent="Center" class="sapUiSmallMarginEnd">
+									<items>
+										<Image src="./resources/inventory.png" height="auto" width="60px" press="_onImageTap" alt="INVETN"/>
+										<FlexBox class="sapUiNoMarginBottom">
+											<Title text="Inventario" titleStyle="H5" width="130px" textAlign="Center" wrapping="true"/>
+										</FlexBox>
+									</items>
+									<layoutData/>
+								</VBox>
+							</l:Grid>
+						</items>
+						<layoutData/>
+					</HBox>
+				</items>
+				<layoutData/>
+			</VBox> -->
+		</content>
+		<footer>
+			<OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="false">
+				<content>
+					<ToolbarSpacer width=""/>
+					<Button icon="sap-icon://signature" text="{i18n>labelFirma}" press="onOpenDialog" class="sapUiSmallMarginEnd"/>
+				</content>
+			</OverflowToolbar>
+		</footer>
+		<footer >
+			<OverflowToolbar width="100%" height="46px" design="Auto" enabled="true" visible="true">
+				<content>
+					<Button icon="sap-icon://person-placeholder" press="openMessage" class="sapUiTinyMarginRight" visible="false"/>
+					<ToolbarSpacer/>
+				</content>
+			</OverflowToolbar>
+		</footer>
+	</Page>
+</mvc:View>

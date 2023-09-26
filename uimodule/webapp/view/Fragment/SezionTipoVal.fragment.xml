@@ -1,0 +1,18 @@
+<c:FragmentDefinition xmlns:form="sap.ui.layout.form"
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core">
+    <Dialog title="" titleAlignment="Center">
+        <form:SimpleForm class="sapUiSmallMarginTopBottom">
+            <Button text="Selezione Tp Valorizz." width="auto" type="Default" press="cercaOrdine" iconDensityAware="false"/>
+            <Label text="Numero di serie " design="Bold" width="100%" />
+            <Input value="" class="fullWidth" submit="cercaOrdine" valueStateText="Invalid entry"/>
+        </form:SimpleForm>
+        <buttons>
+            
+            <Button press="onCloseButt" text="" icon="sap-icon://decline" width="25%"/>
+            <Button press="onAcceptButt" text="OK" icon="sap-icon://accept" visible="{modello>/visible}"/>
+
+        </buttons>
+        
+    </Dialog>
+</c:FragmentDefinition>

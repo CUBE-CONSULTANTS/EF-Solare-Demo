@@ -1,90 +1,740 @@
 {
-  "_version": "1.21.0",
-  "sap.app": {
-    "id": "com.myorg.emptyStaticProject",
-    "type": "application",
-    "i18n": "i18n/i18n.properties",
-    "applicationVersion": {
-      "version": "1.0.0"
-    },
-    "title": "{{appTitle}}",
-    "description": "{{appDescription}}"
-  },
-  "sap.ui": {
-    "technology": "UI5",
-    "icons": {
-      "icon": "",
-      "favIcon": "",
-      "phone": "",
-      "phone@2": "",
-      "tablet": "",
-      "tablet@2": ""
-    },
-    "deviceTypes": {
-      "desktop": true,
-      "tablet": true,
-      "phone": true
-    }
-  },
-  "sap.ui5": {
-    "flexEnabled": true,
-    "rootView": {
-      "viewName": "com.myorg.emptyStaticProject.view.MainView",
-      "type": "XML",
-      "async": true,
-      "id": "idAppControl"
-    },
-    "dependencies": {
-      "minUI5Version": "1.60.0",
-      "libs": {
-        "sap.ui.core": {},
-        "sap.m": {},
-        "sap.ui.layout": {}
-      }
-    },
-    "contentDensities": {
-      "compact": true,
-      "cozy": true
-    },
-    "models": {
-      "i18n": {
-        "type": "sap.ui.model.resource.ResourceModel",
-        "settings": {
-          "bundleName": "com.myorg.emptyStaticProject.i18n.i18n"
-        }
-      }
-    },
-    "resources": {
-      "css": [
-        {
-          "uri": "css/style.css"
-        }
-      ]
-    },
-    "routing": {
-      "config": {
-        "routerClass": "sap.m.routing.Router",
-        "viewType": "XML",
-        "viewPath": "com.myorg.emptyStaticProject.view",
-        "controlId": "idAppControl",
-        "controlAggregation": "pages",
-        "async": true
-      },
-      "routes": [
-        {
-          "name": "RouteMainView",
-          "pattern": "RouteMainView",
-          "target": ["TargetMainView"]
-        }
-      ],
-      "targets": {
-        "TargetMainView": {
-          "viewType": "XML",
-          "viewLevel": 1,
-          "viewId": "idAppControl",
-          "viewName": "MainView"
-        }
-      }
-    }
-  }
+	"_version": "1.8.0",
+	"sap.app": {
+		"_version": "1.3.0",
+		"id": "com.sap.build.eeb1117ce-eu_2.untitledPrototype",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.2.2"
+		},
+		"dataSources": {
+			"ZGME_SRV_01": {
+				"uri": "/sap/opu/odata/sap/ZGME_SRV_01/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/ZGME_SRV_01/metadata.xml"
+				}
+			}
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"ach": "ach",
+		"resources": "resources.json",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.32.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.3.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"_version": "1.3.0",
+		"rootView": {
+			"viewName": "generated.app.view.DettaglioPreconteggio",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.50.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"uri": "i18n/i18n.properties"
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request",
+					"useBatch": false
+				},
+				"dataSource": "ZGME_SRV_01",
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			],
+			"js": [
+				{
+					"uri": "js/signature_pad.min.js"
+				},
+				{
+					"uri": "js/main.js"
+				}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "com.sap.build.eeb1117ce-eu_2.untitledPrototype.view",
+				"controlId": "App",
+				"clearTarget": false,
+				"controlAggregation": "pages",
+				"bypassed": {
+					"target": [
+						"Menu"
+					]
+				}
+			},
+			"targets": {
+				"MovimentiLogistici": {
+					"controlAggregation": "pages",
+					"viewName": "MovimentiLogistici",
+					"viewId": "MovimentiLogistici",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"IndirizzoProvenienza": {
+					"controlAggregation": "pages",
+					"viewName": "IndirizzoProvenienza",
+					"viewId": "IndirizzoProvenienza",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"DatiVeicolo": {
+					"controlAggregation": "pages",
+					"viewName": "DatiVeicolo",
+					"viewId": "DatiVeicolo",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"ListaMaterialiDDT": {
+					"controlAggregation": "pages",
+					"viewName": "ListaMaterialiDDT",
+					"viewId": "ListaMaterialiDDT",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"IndirizzoDestinazione": {
+					"controlAggregation": "pages",
+					"viewName": "IndirizzoDestinazione",
+					"viewId": "IndirizzoDestinazione",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"DDT": {
+					"controlAggregation": "pages",
+					"viewName": "CreaDDT",
+					"viewId": "DDT",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"preConteggio": {
+					"controlAggregation": "pages",
+					"viewName": "preConteggio",
+					"viewId": "preConteggio",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"InvioFornitore": {
+					"controlAggregation": "pages",
+					"viewName": "InvioFornitore",
+					"viewId": "InvioFornitore",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"InvioSenzaOrdine": {
+					"controlAggregation": "pages",
+					"viewName": "InvioSenzaOrdine",
+					"viewId": "InvioSenzaOrdine",
+					"viewLevel": 3,
+					"transition": "slide"
+				},
+				"InvioConOrdine": {
+					"controlAggregation": "pages",
+					"viewName": "InvioConOrdine",
+					"viewId": "InvioConOrdine",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"UmPerRottamazione": {
+					"controlAggregation": "pages",
+					"viewName": "UmPerRottamazione",
+					"viewId": "UmPerRottamazione",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"UmPerCdC": {
+					"controlAggregation": "pages",
+					"viewName": "UmPerCdC",
+					"viewId": "UmPerCdC",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				
+				"MaterialeUscitaMag": {
+					"controlAggregation": "pages",
+					"viewName": "MaterialeUscitaMag",
+					"viewId": "MaterialeUscitaMag",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"MaterialeIngressoMag": {
+					"controlAggregation": "pages",
+					"viewName": "MaterialeIngressoMag",
+					"viewId": "MaterialeIngressoMag",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"CambioUbicazioneMateriale": {
+					"controlAggregation": "pages",
+					"viewName": "CambioUbicazioneMateriale",
+					"viewId": "CambioUbicazioneMateriale",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"AssegnazioneDpiVestiario": {
+					"controlAggregation": "pages",
+					"viewName": "AssegnazioneDpiVestiario",
+					"viewId": "AssegnazioneDpiVestiario",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"AssegnazioneTools": {
+					"controlAggregation": "pages",
+					"viewName": "AssegnazioneTools",
+					"viewId": "AssegnazioneTools",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"AssegnazioneToolsCid": {
+					"controlAggregation": "pages",
+					"viewName": "AssegnazioneToolsCid",
+					"viewId": "AssegnazioneToolsCid",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"AssegnazioneToolsTK": {
+					"controlAggregation": "pages",
+					"viewName": "AssegnazioneToolsTK",
+					"viewId": "AssegnazioneToolsTK",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"Menu": {
+					"controlAggregation": "pages",
+					"viewName": "Menu",
+					"viewId": "Menu",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				
+				"SelezioneTkFornitore": {
+					"controlAggregation": "pages",
+					"viewName": "SelezioneTkFornitore",
+					"viewId": "SelezioneTkFornitore",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				
+				
+				"SelezioneMaterialiDaPrelevare": {
+					"controlAggregation": "pages",
+					"viewName": "SelezioneMaterialiDaPrelevare",
+					"viewId": "SelezioneMaterialiDaPrelevare",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				
+				"RientroManutDefault": {
+					"controlAggregation": "pages",
+					"viewName": "RientroManutDefault",
+					"viewId": "RientroManutDefault",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"RientroSelezioneMat": {
+					"controlAggregation": "pages",
+					"viewName": "RientroSelezioneMat",
+					"viewId": "RientroSelezioneMat",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"InfoMateriale": {
+					"controlAggregation": "pages",
+					"viewName": "InfoMateriale",
+					"viewId": "InfoMateriale",
+					"viewLevel": 2,
+					"transition": "slide"
+				},
+				"DettaglioPreconteggio": {
+					"controlAggregation": "pages",
+					"viewName": "DettaglioPreconteggio",
+					"viewId": "DettaglioPreconteggio",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"DettaglioMateriale": {
+					"controlAggregation": "pages",
+					"viewName": "DettaglioMateriale",
+					"viewId": "DettaglioMateriale",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"SelezionaMaterialiDaStampare": {
+					"controlAggregation": "pages",
+					"viewName": "SelezionaMaterialiDaStampare",
+					"viewId": "SelezionaMaterialiDaStampare",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"SelezionaMaterialiDaStampareRientro": {
+					"controlAggregation": "pages",
+					"viewName": "SelezionaMaterialiDaStampareRientro",
+					"viewId": "SelezionaMaterialiDaStampareRientro",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"MaterialeIngressoMagStampa": {
+					"controlAggregation": "pages",
+					"viewName": "MaterialeIngressoMagStampa",
+					"viewId": "MaterialeIngressoMagStampa",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"Materiali": {
+					"controlAggregation": "pages",
+					"viewName": "Materiali",
+					"viewId": "Materiali",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"TrasfMagMater": {
+					"controlAggregation": "pages",
+					"viewName": "TrasfMagMater",
+					"viewId": "TrasfMagMater",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"Consegna": {
+					"controlAggregation": "pages",
+					"viewName": "Consegna",
+					"viewId": "Consegna",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"DetInvioMag": {
+					"controlAggregation": "pages",
+					"viewName": "DetInvioMag",
+					"viewId": "DetInvioMag",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"OrdTrasf": {
+					"controlAggregation": "pages",
+					"viewName": "OrdTrasf",
+					"viewId": "OrdTrasf",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"DettaglioMaterialeOrdine": {
+					"controlAggregation": "pages",
+					"viewName": "DettaglioMaterialeOrdine",
+					"viewId": "DettaglioMaterialeOrdine",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"RientroRiparo": {
+					"controlAggregation": "pages",
+					"viewName": "RientroRiparo",
+					"viewId": "RientroRiparo",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"DetOrdMag": {
+					"controlAggregation": "pages",
+					"viewName": "DetOrdMag",
+					"viewId": "DetOrdMag",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"PrelxImpeg": {
+					"controlAggregation": "pages",
+					"viewName": "PrelxImpeg",
+					"viewId": "PrelxImpeg",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"DetOrdMagImpegn": {
+					"controlAggregation": "pages",
+					"viewName": "DetOrdMagImpegn",
+					"viewId": "DetOrdMagImpegn",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"RicReso": {
+					"controlAggregation": "pages",
+					"viewName": "RicReso",
+					"viewId": "RicReso",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"InRipFGar": {
+					"controlAggregation": "pages",
+					"viewName": "InRipFGar",
+					"viewId": "InRipFGar",
+					"viewLevel": 1,
+					"transition": "slide"
+				},
+				"RiparoGaranzia": {
+					"controlAggregation": "pages",
+					"viewName": "RiparoGaranzia",
+					"viewId": "RiparoGaranzia",
+					"viewLevel": 1,
+					"transition": "slide"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "MovimentiLogistici/:context:",
+					"name": "MovimentiLogistici",
+					"target": [
+						"MovimentiLogistici"
+					]
+				},
+				{
+					"pattern": "Materiali",
+					"name": "Materiali",
+					"target": [
+						"Materiali"
+					]
+				},
+				{
+					"pattern": "RiparoGaranzia",
+					"name": "RiparoGaranzia",
+					"target": [
+						"RiparoGaranzia"
+					]
+				},
+				{
+					"pattern": "DetOrdMagImpegn",
+					"name": "DetOrdMagImpegn",
+					"target": [
+						"DetOrdMagImpegn"
+					]
+				},
+				{
+					"pattern": "RicReso",
+					"name": "RicReso",
+					"target": [
+						"RicReso"
+					]
+				},
+				{
+					"pattern": "DetOrdMag",
+					"name": "DetOrdMag",
+					"target": [
+						"DetOrdMag"
+					]
+				},
+				{
+					"pattern": "PrelxImpeg/:context:",
+					"name": "PrelxImpeg",
+					"target": [
+						"PrelxImpeg"
+					]
+				},
+				{
+					"pattern": "InRipFGar/:context:",
+					"name": "InRipFGar",
+					"target": [
+						"InRipFGar"
+					]
+				},
+				{
+					"pattern": "DettaglioMaterialeOrdine",
+					"name": "DettaglioMaterialeOrdine",
+					"target": [
+						"DettaglioMaterialeOrdine"
+					]
+				},
+				{
+					"pattern": "OrdTrasf/:context:",
+					"name": "OrdTrasf",
+					"target": [
+						"OrdTrasf"
+					]
+				},
+				{
+					"pattern": "RientroRiparo/:context:",
+					"name": "RientroRiparo",
+					"target": [
+						"RientroRiparo"
+					]
+				},
+				{
+					"pattern": "Consegna",
+					"name": "Consegna",
+					"target": [
+						"Consegna"
+					]
+				},
+				{
+					"pattern": "DetInvioMag/:context:",
+					"name": "DetInvioMag",
+					"target": [
+						"DetInvioMag"
+					]
+				},
+				{
+					"pattern": "TrasfMagMater",
+					"name": "TrasfMagMater",
+					"target": [
+						"TrasfMagMater"
+					]
+				},
+				{
+					"pattern": "DDT/:context:",
+					"name": "DDT",
+					"target": [
+						"DDT"
+					]
+				},
+				{
+					"pattern": "DatiVeicolo/:context:",
+					"name": "DatiVeicolo",
+					"target": [
+						"DatiVeicolo"
+					]
+				},
+				{
+					"pattern": "ListaMaterialiDDT/:context:",
+					"name": "ListaMaterialiDDT",
+					"target": [
+						"ListaMaterialiDDT"
+					]
+				},
+				{
+					"pattern": "IndirizzoDestinazione/:context:",
+					"name": "IndirizzoDestinazione",
+					"target": [
+						"IndirizzoDestinazione"
+					]
+				},
+				{
+					"pattern": "IndirizzoProvenienza/:context:",
+					"name": "IndirizzoProvenienza",
+					"target": [
+						"IndirizzoProvenienza"
+					]
+				},
+				{
+					"pattern": "",
+					"name": "default",
+					"target": [
+						"Menu"
+					]
+				},
+				{
+					"pattern": "InfoMateriale/:context:",
+					"name": "InfoMateriale",
+					"target": [
+						"InfoMateriale"
+					]
+				},
+				{
+					"pattern": "InvioFornitore/:context:",
+					"name": "InvioFornitore",
+					"target": [
+						"InvioFornitore"
+					]
+				},
+				{
+					"pattern": "DettaglioPreconteggio/:context:",
+					"name": "DettaglioPreconteggio",
+					"target": [
+						"DettaglioPreconteggio"
+					]
+				},
+				{
+					"pattern": "InvioSenzaOrdine/:context:",
+					"name": "InvioSenzaOrdine",
+					"target": [
+						"InvioSenzaOrdine"
+					]
+				},
+				{
+					"pattern": "ElaborazionePreconteggio/:context:",
+					"name": "ElaborazionePreconteggio",
+					"target": [
+						"ElaborazionePreconteggio"
+					]
+				},
+				{
+					"pattern": "InvioConOrdine/:context:",
+					"name": "InvioConOrdine",
+					"target": [
+						"InvioConOrdine"
+					]
+				},
+				{
+					"pattern": "DettaglioMateriale/:context:",
+					"name": "DettaglioMateriale",
+					"target": [
+						"DettaglioMateriale"
+					]
+				},
+				{
+					"pattern": "UmPerRottamazione/:context:",
+					"name": "UmPerRottamazione",
+					"target": [
+						"UmPerRottamazione"
+					]
+				},
+				{
+					"pattern": "UmPerCdC/:context:",
+					"name": "UmPerCdC",
+					"target": [
+						"UmPerCdC"
+					]
+				},
+				{
+					"pattern": "MaterialeUscitaMag/:context:",
+					"name": "MaterialeUscitaMag",
+					"target": [
+						"MaterialeUscitaMag"
+					]
+				},
+				{
+					"pattern": "MaterialeIngressoMag/:context:",
+					"name": "MaterialeIngressoMag",
+					"target": [
+						"MaterialeIngressoMag"
+					]
+				},
+				{
+					"pattern": "CambioUbicazioneMateriale/:context:",
+					"name": "CambioUbicazioneMateriale",
+					"target": [
+						"CambioUbicazioneMateriale"
+					]
+				},
+				{
+					"pattern": "AssegnazioneDpiVestiario/:context:",
+					"name": "AssegnazioneDpiVestiario",
+					"target": [
+						"AssegnazioneDpiVestiario"
+					]
+				},
+				{
+					"pattern": "AssegnazioneTools/:context:",
+					"name": "AssegnazioneTools",
+					"target": [
+						"AssegnazioneTools"
+					]
+				},
+				{
+					"pattern": "AssegnazioneToolsCid/:context:",
+					"name": "AssegnazioneToolsCid",
+					"target": [
+						"AssegnazioneToolsCid"
+					]
+				},
+				{
+					"pattern": "AssegnazioneToolsTK/:context:",
+					"name": "AssegnazioneToolsTK",
+					"target": [
+						"AssegnazioneToolsTK"
+					]
+				},
+				{
+					"pattern": "Menu/:context:",
+					"name": "Menu",
+					"target": [
+						"Menu"
+					]
+				},
+				{
+					"pattern": "SelezioneTkFornitore/:context:",
+					"name": "SelezioneTkFornitore",
+					"target": [
+						"SelezioneTkFornitore"
+					]
+				},
+				
+				
+				{
+					"pattern": "SelezioneMaterialiDaPrelevare/:context:",
+					"name": "SelezioneMaterialiDaPrelevare",
+					"target": [
+						"SelezioneMaterialiDaPrelevare"
+					]
+				},
+				
+				{
+					"pattern": "RientroManutDefault/:context:",
+					"name": "RientroManutDefault",
+					"target": [
+						"RientroManutDefault"
+					]
+				},
+				{
+					"pattern": "preConteggio/:context:",
+					"name": "preConteggio",
+					"target": [
+						"preConteggio"
+					]
+				},
+				{
+					"pattern": "RientroSelezioneMat",
+					"name": "RientroSelezioneMat",
+					"target": [
+						"RientroSelezioneMat"
+					]
+				},
+				{
+					"pattern": "SelezionaMaterialiDaStampare/:context:",
+					"name": "SelezionaMaterialiDaStampare",
+					"target": [
+						"SelezionaMaterialiDaStampare"
+					]
+				},
+				{
+					"pattern": "SelezionaMaterialiDaStampareRientro/:context:",
+					"name": "SelezionaMaterialiDaStampareRientro",
+					"target": [
+						"SelezionaMaterialiDaStampareRientro"
+					]
+				},
+				{
+					"pattern": "MaterialeIngressoMagStampa/:context:",
+					"name": "MaterialeIngressoMagStampa",
+					"target": [
+						"MaterialeIngressoMagStampa"
+					]
+				}
+			]
+		}
+	}
 }

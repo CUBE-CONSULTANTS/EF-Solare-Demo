@@ -1,32 +1,113 @@
 <!DOCTYPE html>
+
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="/resources/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <title>emptyStaticProject</title>
+    <meta charset="UTF-8" />
 
-        <script
-            id="sap-ui-bootstrap"
-            src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
-            data-sap-ui-theme="sap_fiori_3"
-            data-sap-ui-resourceroots='{
-        "com.myorg.emptyStaticProject": "./"
-      }'
-            data-sap-ui-oninit="module:sap/ui/core/ComponentSupport"
-            data-sap-ui-compatVersion="edge"
-            data-sap-ui-async="true"
-            data-sap-ui-frameOptions="trusted"
-        ></script>
-    </head>
+    <title>SOLARE</title>
+    
+    <link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16">
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+    <script
+      id="sap-ui-bootstrap"
+      src="https://ui5.sap.com/resources/sap-ui-core.js"
+      data-sap-ui-libs="sap.m"
+      data-sap-ui-theme="sap_belize"
+      data-sap-ui-xx-bindingSyntax="complex"
+      data-sap-ui-preload="async"
+      data-sap-ui-resourceroots='{"com.sap.build.eeb1117ce-eu_2.untitledPrototype": "./"}'
+    ></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script>
+    	sap.ui.getCore().attachInit(function() {
+        new sap.m.Shell({
+          app: new sap.ui.core.ComponentContainer({
+            height: "100%",
+            name: "com.sap.build.eeb1117ce-eu_2.untitledPrototype"
+          })
+        }).placeAt("content");
+      });
+       SignaturePad.prototype.removeBlanks = function (returnType) {
+        var imgWidth = this._ctx.canvas.width;
+        var imgHeight = this._ctx.canvas.height;
+        var imageData = this._ctx.getImageData(0, 0, imgWidth, imgHeight),
+        data = imageData.data,
+        getAlpha = function(x, y) {
+            return data[(imgWidth*y + x) * 4 + 3]
+        },
+        scanY = function (fromTop) {
+            var offset = fromTop ? 1 : -1;
 
-    <body class="sapUiBody">
-        <div
-            data-sap-ui-component
-            data-name="com.myorg.emptyStaticProject"
-            data-id="container"
-            data-settings='{"id" : "emptyStaticProject"}'
-        ></div>
-    </body>
+            // loop through each row
+            for(var y = fromTop ? 0 : imgHeight - 1; fromTop ? (y < imgHeight) : (y > -1); y += offset) {
+
+                // loop through each column
+                for(var x = 0; x < imgWidth; x++) {
+                    if (getAlpha(x, y)) {
+                        return y;                        
+                    }      
+                }
+            }
+            return null; // all image is white
+        },
+        scanX = function (fromLeft) {
+            var offset = fromLeft? 1 : -1;
+
+            // loop through each column
+            for(var x = fromLeft ? 0 : imgWidth - 1; fromLeft ? (x < imgWidth) : (x > -1); x += offset) {
+
+                // loop through each row
+                for(var y = 0; y < imgHeight; y++) {
+                    if (getAlpha(x, y)) {
+                        return x;                        
+                    }      
+                }
+            }
+            return null; // all image is white
+        };
+
+        var cropTop = scanY(true),
+        cropBottom = scanY(false),
+        cropLeft = scanX(true),
+        cropRight = scanX(false);
+
+        var relevantData = this._ctx.getImageData(cropLeft, cropTop, cropRight-cropLeft, cropBottom-cropTop);
+        this._canvas.width = cropRight-cropLeft;
+        this._canvas.height = cropBottom-cropTop;
+        this._ctx.clearRect(0, 0, cropRight-cropLeft, cropBottom-cropTop);
+        this._ctx.putImageData(relevantData, 0, 0);
+        var img = this.toDataURL(returnType);
+        this._canvas.width =imgWidth;
+        this._canvas.height = imgHeight;
+        return img;
+    };
+    </script>
+  </head>
+
+  <body class="sapUiBody" id="content">
+ <!-- 	<div id="signature-pad" class="signature-pad">-->
+	<!--    <div class="signature-pad--body">-->
+	<!--      <canvas></canvas>-->
+	<!--    </div>-->
+	<!--    <div class="signature-pad--footer">-->
+	<!--      <div class="description">Sign above</div>-->
+	
+	<!--      <div class="signature-pad--actions">-->
+	<!--        <div>-->
+	<!--          <button type="button" class="button clear" data-action="clear">Clear</button>-->
+	<!--          <button type="button" class="button" data-action="change-color">Change color</button>-->
+	<!--          <button type="button" class="button" data-action="undo">Undo</button>-->
+	
+	<!--        </div>-->
+	<!--        <div>-->
+	<!--          <button type="button" class="button save" data-action="save-png">Save as PNG</button>-->
+	<!--          <button type="button" class="button save" data-action="save-jpg">Save as JPG</button>-->
+	<!--          <button type="button" class="button save" data-action="save-svg">Save as SVG</button>-->
+	<!--        </div>-->
+	<!--      </div>-->
+ <!--   	</div>-->
+	<!--</div>-->
+  </body>
 </html>

@@ -1,0 +1,44 @@
+<mvc:View controllerName="com.sap.build.eeb1117ce-eu_2.untitledPrototype.controller.Materiali"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core" displayBlock="true" height="100%" busyIndicatorDelay="0">
+    <Page title="{i18n>}" showNavButton="true" navButtonPress="_onPageMenu">
+
+        <VBox direction="Column" fitContainer="true" height="auto" renderType="Bare" class="sapUiSmallMarginTopBottom sapUiTinyMarginBeginEnd">
+            <Label text="{i18n>labelOrdine}:" design="Bold" width="100%" />
+            <Input value="{dataSource>/OrdineDDT}" class="fullWidth" submit="cercaOrdine" valueStateText="Invalid entry" maxLength="{config>/maxOrdine}"/>
+        </VBox>
+        <VBox direction="Column" fitContainer="true" height="auto" renderType="Bare" class="sapUiSmallMarginTopBottom sapUiTinyMarginBeginEnd">
+            <Button text="Selezione Div/Magazzino" width="auto" iconDensityAware="false"/>
+        </VBox>
+        <VBox direction="Column" fitContainer="true" height="auto" renderType="Bare" class="sapUiSmallMarginTopBottom sapUiTinyMarginBeginEnd">
+            <Button text="Selexione TP Valorizz." width="auto" iconDensityAware="false"/>
+        </VBox>
+
+        <VBox direction="Column" fitContainer="true" height="auto" renderType="Bare" class="sapUiSmallMarginTopBottom sapUiTinyMarginBeginEnd">
+            <Label text="Numero di Serie:" design="Bold" width="100%" />
+            <Input value="" class="fullWidth" valueStateText="Invalid entry" />
+            <Label text="Quantità:" design="Bold" width="100%" />
+            <Input value="" class="fullWidth" valueStateText="Invalid entry" />
+            <FlexBox justifyContent="End">
+                <Button text="Aggiungi" width="auto" iconDensityAware="false"/>
+            </FlexBox>
+        </VBox>
+        <VBox>
+            <Label text="Lista Materiali:" design="Bold" width="100%" />
+            <core:Fragment fragmentName="com.sap.build.eeb1117ce-eu_2.untitledPrototype.view.Fragment.ListaMateriali" type="XML" />
+
+        </VBox>
+        <footer>
+            <OverflowToolbar width="100%" height="46px">
+                <ToolbarSpacer/>
+                <Button text="Conferma" press=""/>
+            </OverflowToolbar>
+        </footer>
+        <headerContent>
+            <Image src="  ./resources/Logo.png" height="43px" width="80px" densityAware="true"/>
+        </headerContent>
+    </Page>
+</mvc:View>

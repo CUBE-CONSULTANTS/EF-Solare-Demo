@@ -1,0 +1,24 @@
+{
+    "Dati": [
+        {
+            "Materiale":"1000234",
+            "Descrizione":"Materiale prova",
+            "Magazzino":"xxxx",           
+            "Divisione":"xxxx",
+            "Tipo":"xxxx",
+            "Numero_Serie":"A123456789",
+            "Quantità":"12",
+            "Misura":"PZ"
+        },
+        {
+            "Materiale":"1006324",
+            "Descrizione":"Materiale prova2",
+            "Magazzino":"yyyy",           
+            "Divisione":"yyyy",
+            "Tipo":"zzzzzz",
+            "Numero_Serie":"9845",
+            "Quantità":"1",
+            "Misura":"PZ"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.eeb1117ce-eu_2.untitledPrototype.controller.PrelxImpeg"
+	xmlns="sap.m">
+	<Page title="{i18n>}" showNavButton="true" navButtonPress="_onPageMenu">
+		
+		<VBox direction="Column" fitContainer="true" height="auto" justifyContent="Start" renderType="Bare" displayInline="false" class="sapUiSmallMarginTopBottom sapUiTinyMarginBeginEnd">
+			<Label text="{modellotitolo>/}" design="Bold" width="100%" />
+			<Input id="ordineddt" class="fullWidth" submit="cercaOrdine" valueStateText="Invalid entry"/>
+			
+		</VBox>
+		
+		<footer>
+			<OverflowToolbar width="100%" height="46px" >
+				<ToolbarSpacer/>
+				<Button text="Avanti" width="auto"  press="onNext" iconDensityAware="false"/>
+			</OverflowToolbar>
+		</footer>
+		<headerContent>
+			<Image src="  ./resources/Logo.png" height="43px" width="80px" densityAware="true"/>
+		</headerContent>
+	</Page>
+</mvc:View>

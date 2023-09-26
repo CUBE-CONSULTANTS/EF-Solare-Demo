@@ -1,0 +1,29 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.eeb1117ce-eu_2.untitledPrototype.controller.ElaborazionePreconteggio"
+	xmlns="sap.m">
+	<Page showHeader="true" title="{i18n>titlePreCont}" showFooter="false" showNavButton="true" navButtonPress="_onPageNavButtonPress">
+		<content>
+			<VBox alignItems="Center" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="SpaceBetween" renderType="Div"
+				visible="true" displayInline="false" class="sapUiSmallMargin">
+				<items>
+					<Image src="./resources/logo.jpg" height="{config>/logoHeight}" width="{config>/logoWidth}" visible="true" densityAware="false"/>
+				</items>
+				<layoutData/>
+			</VBox>
+			<VBox alignItems="Stretch" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="Center" renderType="Div"
+				visible="true" displayInline="false" class="sapUiSmallMargin">
+				<items>
+					<Label text="{i18n>numDoc} :" design="Bold" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+					<Input type="Text" showValueHelp="false" enabled="true" visible="true" width="100%" valueHelpOnly="false" required="false"
+						valueStateText="Invalid entry" id="numDoc" value="{dataSource>/numeroDoc}" maxLength="9"/>
+					<Button text="{i18n>buttonCerca}" type="Default" iconFirst="true" width="100%" enabled="true" visible="true" iconDensityAware="false"
+						press="onSearchPress"/>
+				</items>
+				<layoutData/>
+			</VBox>
+		</content>
+		<footer/>
+		<headerContent>
+			<Image src=" ./resources/Logo.png" height="43px" width="80px" densityAware="true"/>
+		</headerContent>
+	</Page>
+</mvc:View>

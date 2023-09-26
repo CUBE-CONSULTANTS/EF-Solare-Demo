@@ -1,0 +1,98 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.eeb1117ce-eu_2.untitledPrototype.controller.DettaglioMateriale"
+	xmlns="sap.m"
+	xmlns:l="sap.ui.layout"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:c="sap.ui.core">
+	<Page showHeader="true" title="Lista Materiali" showFooter="false" showNavButton="true" navButtonPress="_onPageNavButtonPress">
+		<content>
+			<form:SimpleForm layout="ResponsiveGridLayout" adjustLabelSpan="false">
+				<FlexBox direction="Row">
+					<Label text="Materiale " class="clasTop"/>
+				</FlexBox>
+				<Text text="{modelloDati>/Dato/0/Materiale}" />
+
+
+				<Text text="{modelloDati>/Dato/0/Descrizione}"/>
+				<Label text="Magazzino" />
+				<Text text="{modelloDati>/Dato/0/Magazzino}"/>
+				<Label text="Divisione" />
+				<Text text="{modelloDati>/Dato/0/Divisione}"/>
+				<Label text="Tipo Valorizz." />
+				<Text text="{modelloDati>/Dato/0/Tipo}"/>
+				<Label text="Numero di serie" />
+				<Text text="{modelloDati>/Dato/0/Numero_Serie}"/>
+				<Label text="Quantità " />
+				<Text text="{modelloDati>/Dato/0/Quantità} {modelloDati>/Dato/0/Misura}" maxLines="1" wrapping="false" />
+			</form:SimpleForm>
+			<!-- <c:Fragment fragmentName="com.sap.build.eeb1117ce-eu_2.untitledPrototype.view.Fragment.ListaMateriali" type="XML" />
+
+					 -->
+			<!-- <List growing="true" class="listaMateriali clasTop" growingScrollToLoad="true" items="{ path: 'modelloDati>/Dato'}">
+				<CustomListItem>
+					<HBox class="listContainer clasPas" alignItems="Start" width="auto" height="auto" justifyContent="SpaceAround">
+						<VBox width="100%" height="auto" renderType="Bare">
+
+							<l:Grid class="sapUiTinyMarginTop sapUiNoContentPadding fullWidth gridNoMargin clasPas" defaultSpan="L6 M6 S6" vSpacing="2">
+								<HBox alignItems="Start" fitContainer="true" renderType="Bare" class="fullWidth paddingRight05rem " wrap="Wrap">
+									<Label text="Materiale: " class="classText"/>
+									<Text class="sapUiTinyMarginBegin sapUiTinyMarginBegin classText" text="{modelloDati>Materiale}" />
+								</HBox>
+								<HBox alignItems="Start" fitContainer="true" renderType="Bare" class="fullWidth paddingRight05rem" wrap="Wrap">
+
+									<Text class="sapUiTinyMarginBegin classText" text="{modelloDati>Descrizione}"/>
+								</HBox>
+							</l:Grid>
+
+							<l:Grid class="sapUiTinyMarginTop sapUiNoContentPadding fullWidth gridNoMargin clasPas" defaultSpan="L6 M6 S6" vSpacing="2">
+								<HBox alignItems="Start" fitContainer="true" renderType="Bare" class="fullWidth paddingRight05rem" wrap="Wrap">
+									<Label text="Magazzino" class="classText"/>
+									<Text class="sapUiTinyMarginBegin classText" text="{modelloDati>Magazzino}"/>
+								</HBox>
+								<HBox fitContainer="true" renderType="Bare" class="fullWidth paddingLeft05rem" wrap="Wrap">
+									<Label text="Divisione" class="classText"/>
+									<Text class="sapUiTinyMarginBegin classText" text="{modelloDati>Divisione}"/>
+								</HBox>
+							</l:Grid>
+							<l:Grid class="sapUiTinyMarginTop sapUiNoContentPadding fullWidth gridNoMargin" defaultSpan="L6 M6 S6">
+								<HBox alignItems="Start" fitContainer="true" renderType="Bare" class="fullWidth paddingRight05rem" wrap="Wrap">
+									<Label text="Tipo Valorizz." class="classText"/>
+									<Text class="sapUiTinyMarginBegin classText" text="{modelloDati>Tipo}"/>
+								</HBox>
+								<HBox fitContainer="true" renderType="Bare" class="fullWidth paddingLeft05rem" wrap="Wrap">
+									<Label text="Numero di serie" class="classText"/>
+									<Text class="sapUiTinyMarginBegin classText" text="{modelloDati>Numero_Serie}"/>
+								</HBox>
+							</l:Grid>
+							<l:Grid class="sapUiTinyMarginTop sapUiNoContentPadding fullWidth gridNoMargin" defaultSpan="L6 M6 S6">
+								<HBox class="sapUiTinyMarginTop" renderType="Bare" wrap="Wrap">
+									<Label text="Quantità " class="classText"/>
+									<Text class="sapUiTinyMarginBegin classText" text="{modelloDati>Quantità} {modelloDati>Misura}" maxLines="1" wrapping="false" />
+								</HBox>
+							</l:Grid> -->
+
+			<!-- <HBox class="sapUiTinyMarginTop" renderType="Bare" wrap="Wrap">
+									<Label text="Quantità "/>
+									<Text class="sapUiTinyMarginBegin" text="{modelloDati>Quantità} {modelloDati>Misura}" maxLines="1" wrapping="false" />
+								</HBox> -->
+
+			<!-- </VBox>
+						
+					</HBox>
+				</CustomListItem>
+			</List> -->
+
+		</content>
+		<footer>
+			<OverflowToolbar width="100%" height="46px" visible="false">
+				<content>
+					<ToolbarSpacer width=""/>
+					<Button text="Save" type="Emphasized" width="auto" iconDensityAware="false"/>
+					<Button text="Cancel" width="auto" iconDensityAware="false"/>
+				</content>
+			</OverflowToolbar>
+		</footer>
+		<headerContent>
+			<Image src="  ./resources/Logo.png" height="43px" width="80px" densityAware="true"/>
+		</headerContent>
+	</Page>
+</mvc:View>

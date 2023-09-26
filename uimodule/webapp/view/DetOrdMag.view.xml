@@ -1,0 +1,34 @@
+<mvc:View controllerName="com.sap.build.eeb1117ce-eu_2.untitledPrototype.controller.DetOrdMag"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core" displayBlock="true" height="100%" busyIndicatorDelay="0">
+    <Page showHeader="true" title="{i18n>titleDettaglio}" showFooter="true" showNavButton="true" navButtonPress="_onPageMenu">
+        <content>
+            <FlexBox direction="Row">
+                <VBox direction="Column" fitContainer="true" height="auto" justifyContent="Start" renderType="Bare" displayInline="false" class="sapUiSmallMarginTopBottom sapUiTinyMarginBeginEnd">
+                    <Label text="Materiale:" design="Bold" width="100%" />
+                    <Input value="" class="fullWidth" submit="cercaOrdine" valueStateText="Invalid entry"/>
+                </VBox>
+                <VBox direction="Column" fitContainer="true" height="auto" justifyContent="Start" renderType="Bare" displayInline="false" class="sapUiSmallMarginTopBottom sapUiTinyMarginBeginEnd">
+                    <Label text="Qta prelevata:" design="Bold" width="100%" />
+                    <Input value="0" class="fullWidth" submit="cercaOrdine" valueStateText="Invalid entry"/>
+
+                </VBox>
+            </FlexBox>
+            <c:Fragment fragmentName="com.sap.build.eeb1117ce-eu_2.untitledPrototype.view.Fragment.ListaMateriali" type="XML" />
+
+            
+            
+
+        </content>
+        <footer>
+            <OverflowToolbar width="100%" height="46px">
+                <ToolbarSpacer/>
+                <Button text="Avanti" width="auto" type="Default" press="cercaOrdine" iconDensityAware="false"/>
+            </OverflowToolbar>
+        </footer>
+        <headerContent>
+			<Image src="  ./resources/Logo.png" height="43px" width="80px" densityAware="true"/>
+		</headerContent>
+    </Page>
+</mvc:View>
