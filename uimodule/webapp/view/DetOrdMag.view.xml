@@ -29,7 +29,7 @@
         <footer>
             <OverflowToolbar width="100%" height="46px">
                 <ToolbarSpacer/>
-                <Button text="Avanti" width="auto" type="Default" press="cercaOrdine" iconDensityAware="false"/>
+                <Button text="Conferma" width="auto" type="Default" press="cercaOrdine" iconDensityAware="false"/>
             </OverflowToolbar>
         </footer>
         <headerContent>
