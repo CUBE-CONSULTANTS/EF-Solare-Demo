@@ -15,12 +15,17 @@
                 <Input value="" class="fullWidth" submit="cercaOrdine" valueStateText="Invalid entry"/>
             </VBox>
             <VBox direction="Column" fitContainer="true" height="auto" justifyContent="Start" renderType="Bare" displayInline="false" class="sapUiSmallMarginTopBottom sapUiTinyMarginBeginEnd">
-                <Label text="Qta prelevata:" design="Bold" width="100%" />
+                <Label text="Qta contata:" design="Bold" width="100%" />
                 <Input value="0" class="fullWidth" submit="cercaOrdine" valueStateText="Invalid entry"/>
 
             </VBox>
         </FlexBox>
-        <c:Fragment fragmentName="com.sap.build.eeb1117ce-eu_2.untitledPrototype.view.Fragment.ListaMateriali" type="XML" />
+        <VBox direction="Column" fitContainer="true" height="auto" justifyContent="" renderType="Bare" displayInline="false" class="sapUiSmallMarginTopBottom sapUiTinyMarginBeginEnd">
+            <FlexBox justifyContent="End">
+                <Button text="Aggiungi" />
+            </FlexBox>
+        </VBox>
+        <c:Fragment fragmentName="com.sap.build.eeb1117ce-eu_2.untitledPrototype.view.Fragment.ListaInventario" type="XML" />
             
 
     </content>

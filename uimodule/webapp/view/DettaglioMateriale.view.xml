@@ -3,7 +3,7 @@
 	xmlns:l="sap.ui.layout"
 	xmlns:form="sap.ui.layout.form"
 	xmlns:c="sap.ui.core">
-	<Page showHeader="true" title="Lista Materiali" showFooter="false" showNavButton="true" navButtonPress="_onPageNavButtonPress">
+	<Page showHeader="true" title="Dettaglio Materiale" showFooter="false" showNavButton="true" navButtonPress="_onPageNavButtonPress">
 		<content>
 			<form:SimpleForm layout="ResponsiveGridLayout" adjustLabelSpan="false">
 				<FlexBox direction="Row">
@@ -18,6 +18,8 @@
 				<Label text="Divisione" />
 				<Text text="{modelloDati>/Dato/0/Divisione}"/>
 				<Label text="Tipo Valorizz." />
+				<Text text="{modelloDati>/Dato/0/Tipo}"/>
+					<Label text="Ubdicazione" />
 				<Text text="{modelloDati>/Dato/0/Tipo}"/>
 				<Label text="Numero di serie" />
 				<Text text="{modelloDati>/Dato/0/Numero_Serie}"/>

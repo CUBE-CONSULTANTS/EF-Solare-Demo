@@ -28,7 +28,9 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 					oRouter.navTo("Materiali");
 					break;
 				case "TM":
-					oRouter.navTo("TrasfMagMater");
+					// oRouter.navTo("TrasfMagMater");
+					oRouter.navTo("TrasferimentoMat");
+
 					break;
 				case "INM":
 					oRouter.navTo("Consegna");
@@ -38,66 +40,73 @@ sap.ui.define(["sap/ui/core/mvc/Controller",
 					oRouter.navTo("OrdTrasf");
 					break;
 				case "PREIMP":
-					oRouter.navTo("PrelxImpeg",{"context":"prelievo"});
+					oRouter.navTo("PrelxImpeg", { "context": "prelievo" });
 					break;
 				case "RICRESO":
-					oRouter.navTo("PrelxImpeg",{"context":"reso"});//
+					oRouter.navTo("PrelxImpeg", { "context": "reso" });//
 					break;
 				case "INVRIENTR":
-					oRouter.navTo("PrelxImpeg",{"context":"fuorigaranzia"});
+					oRouter.navTo("PrelxImpeg", { "context": "fuorigaranzia" });
 					break;
 				case "INVRIPG":
-					oRouter.navTo("PrelxImpeg",{"context":"ingaranzia"})
+					oRouter.navTo("PrelxImpeg", { "context": "ingaranzia" })
 					break;
 				case "RIENTRIPG":
 					oRouter.navTo("RientroRiparo");
 					break;
 				case "INVETN":
-					oRouter.navTo("PrelxImpeg",{"context":"inventario"});
-					
+					oRouter.navTo("PrelxImpeg", { "context": "inventario" });
+
 					break;
-				
+
 			}
 
 
 		},
 
 		onInit: function (evt) {
-			this.getOwnerComponent().setModel(new sap.ui.model.json.JSONModel(),"modelloDati")
-			
-			this.getOwnerComponent().getModel("modelloDati").setProperty("/",{
+			this.getOwnerComponent().setModel(new sap.ui.model.json.JSONModel(), "modelloDati")
+
+			this.getOwnerComponent().getModel("modelloDati").setProperty("/", {
 				"Dati": [
 					{
-						"Materiale":"1000234",
-						"Descrizione":"Materiale prova",
-						"Magazzino":"xxxx",           
-						"Divisione":"xxxx",
-						"Tipo":"xxxx",
-						"Numero_Serie":"A123456789",
-						"Quantità":"12",
-						"Misura":"PZ"
+						"Materiale": "1000234",
+						"Descrizione": "Materiale prova",
+						"Magazzino": "xxxx",
+						"Divisione": "xxxx",
+						"Tipo": "xxxx",
+						"Numero_Serie": "A123456789",
+						"Quantità": "12",
+						"Misura": "PZ",
+						"prelevata":0,
+						"Q.tà Prelievo":1,
+						"Q.tà Impegnata":12
 					},
 					{
-						"Materiale":"1006324",
-						"Descrizione":"Materiale prova2",
-						"Magazzino":"yyyy",           
-						"Divisione":"yyyy",
-						"Tipo":"zzzzzz",
-						"Numero_Serie":"9845",
-						"Quantità":"1",
-						"Misura":"PZ"
+						"Materiale": "1006324",
+						"Descrizione": "Materiale prova2",
+						"Magazzino": "yyyy",
+						"Divisione": "yyyy",
+						"Tipo": "zzzzzz",
+						"Numero_Serie": "9845",
+						"Quantità": "1",
+						"Misura": "PZ",
+						"prelevata":0,
+						"Q.tà Prelievo":4,
+						"Q.tà Impegnata":5
 					}
 				],
 				"Dato": [
 					{
-						"Materiale":"1000234",
-						"Descrizione":"Materiale prova",
-						"Magazzino":"xxxx",           
-						"Divisione":"xxxx",
-						"Tipo":"xxxx",
-						"Numero_Serie":"A123456789",
-						"Quantità":"12",
-						"Misura":"PZ"
+						"Materiale": "1000234",
+						"Descrizione": "Materiale prova",
+						"Magazzino": "xxxx",
+						"Divisione": "xxxx",
+						"Tipo": "xxxx",
+						"Numero_Serie": "A123456789",
+						"Ubdicazione":"xxxxx",
+						"Quantità": "12",
+						"Misura": "PZ"
 					}
 				]
 			})

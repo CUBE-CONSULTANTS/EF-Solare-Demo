@@ -32,13 +32,15 @@
     </VBox>
     <VBox>
         <Label text="Lista Materiali:" design="Bold" width="100%" />
-        <c:Fragment fragmentName="com.sap.build.eeb1117ce-eu_2.untitledPrototype.view.Fragment.ListaMateriali" type="XML" />
+        <c:Fragment fragmentName="com.sap.build.eeb1117ce-eu_2.untitledPrototype.view.Fragment.ListaReso" type="XML" />
 
     </VBox>
     <footer>
         <OverflowToolbar width="100%" height="46px">
             <ToolbarSpacer/>
-            <Button text="Conferma" press="onConferma"/>
+            <!-- <Button text="Conferma" press="onConferma"/> -->
+            <Button text="Conferma" press=""/>
+
         </OverflowToolbar>
     </footer>
     <headerContent>

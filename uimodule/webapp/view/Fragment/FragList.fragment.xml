@@ -1,7 +1,7 @@
-<c:FragmentDefinition xmlns="sap.m"
-    xmlns:l="sap.ui.layout"
+
+<c:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
     xmlns:c="sap.ui.core">
-    <List width="100%" growing="true" class="listaMateriali" growingScrollToLoad="true" items="{ path: 'modelloDati>/Dati'}">
+    <List width="100%" growing="true" class="listaMateriali" growingScrollToLoad="true" items="{ path: 'modelloDati>/Dato'}">
         <CustomListItem>
             <HBox class="listContainer" alignItems="Start" width="auto" height="auto" justifyContent="SpaceAround">
                 <VBox width="100%" height="auto" renderType="Bare">
@@ -16,7 +16,7 @@
                             <Text class="sapUiTinyMarginBegin" text="{modelloDati>Descrizione}"/>
                         </HBox>
                     </l:Grid>
-                    <!-- <l:Grid class="sapUiTinyMarginTop sapUiNoContentPadding fullWidth gridNoMargin" defaultSpan="L6 M6 S6">
+                    <l:Grid class="sapUiTinyMarginTop sapUiNoContentPadding fullWidth gridNoMargin" defaultSpan="L6 M6 S6">
                         <HBox alignItems="Start" fitContainer="true" renderType="Bare" class="fullWidth paddingRight05rem" wrap="Wrap">
                             <Label text="Magazzino"/>
                             <Text class="sapUiTinyMarginBegin" text="{modelloDati>Magazzino}"/>
@@ -25,7 +25,7 @@
                             <Label text="Divisione"/>
                             <Text class="sapUiTinyMarginBegin" text="{modelloDati>Divisione}"/>
                         </HBox>
-                    </l:Grid> -->
+                    </l:Grid>
                     <l:Grid class="sapUiTinyMarginTop sapUiNoContentPadding fullWidth gridNoMargin" defaultSpan="L6 M6 S6">
                         <HBox alignItems="Start" fitContainer="true" renderType="Bare" class="fullWidth paddingRight05rem" wrap="Wrap">
                             <Label text="Tipo Valorizz."/>
@@ -36,26 +36,19 @@
                             <Text class="sapUiTinyMarginBegin" text="{modelloDati>Numero_Serie}"/>
                         </HBox>
                     </l:Grid>
-                    <!-- <l:Grid class="sapUiTinyMarginTop sapUiNoContentPadding fullWidth gridNoMargin" defaultSpan="L6 M6 S6">
-                        <HBox class="sapUiTinyMarginTop" renderType="Bare" wrap="Wrap">
-                            <Label text="Quantità "/>
-                            <Text class="sapUiTinyMarginBegin" text="{modelloDati>Quantità} {modelloDati>Misura}" maxLines="1" wrapping="false" />
-                        </HBox>
-                    </l:Grid> -->
                     <l:Grid class="sapUiTinyMarginTop sapUiNoContentPadding fullWidth gridNoMargin" defaultSpan="L6 M6 S6">
                         <HBox class="sapUiTinyMarginTop" renderType="Bare" wrap="Wrap">
-                            <Label text="Quantità Odt"/>
+                            <Label text="Quantità"/>
                             <Text class="sapUiTinyMarginBegin" text="{modelloDati>Quantità} {modelloDati>Misura}" maxLines="1" wrapping="false" />
                         </HBox>
-                        <HBox class="sapUiTinyMarginTop" renderType="Bare" wrap="Wrap">
-                            <Label text="Quantità ricevuta"/>
-                            <Text class="sapUiTinyMarginBegin" text="{modelloDati>Q.tà Prelievo} {modelloDati>Misura}" maxLines="1" wrapping="false" />
-                        </HBox>
+                       
+                      
                     </l:Grid>
+
                     <!-- <HBox class="sapUiTinyMarginTop" renderType="Bare" wrap="Wrap">
-                    <Label text="Quantità "/>
-                    <Text class="sapUiTinyMarginBegin" text="{modelloDati>Quantità} {modelloDati>Misura}" maxLines="1" wrapping="false" />
-                </HBox> -->
+                <Label text="Quantità "/>
+                <Text class="sapUiTinyMarginBegin" text="{modelloDati>Quantità} {modelloDati>Misura}" maxLines="1" wrapping="false" />
+            </HBox> -->
 
                 </VBox>
                 <VBox alignItems="Start" class="vBoxButton">

@@ -1,5 +1,4 @@
-<c:FragmentDefinition xmlns="sap.m"
-    xmlns:l="sap.ui.layout"
+<c:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout"
     xmlns:c="sap.ui.core">
     <List width="100%" growing="true" class="listaMateriali" growingScrollToLoad="true" items="{ path: 'modelloDati>/Dati'}">
         <CustomListItem>
@@ -16,16 +15,6 @@
                             <Text class="sapUiTinyMarginBegin" text="{modelloDati>Descrizione}"/>
                         </HBox>
                     </l:Grid>
-                    <!-- <l:Grid class="sapUiTinyMarginTop sapUiNoContentPadding fullWidth gridNoMargin" defaultSpan="L6 M6 S6">
-                        <HBox alignItems="Start" fitContainer="true" renderType="Bare" class="fullWidth paddingRight05rem" wrap="Wrap">
-                            <Label text="Magazzino"/>
-                            <Text class="sapUiTinyMarginBegin" text="{modelloDati>Magazzino}"/>
-                        </HBox>
-                        <HBox fitContainer="true" renderType="Bare" class="fullWidth paddingLeft05rem" wrap="Wrap">
-                            <Label text="Divisione"/>
-                            <Text class="sapUiTinyMarginBegin" text="{modelloDati>Divisione}"/>
-                        </HBox>
-                    </l:Grid> -->
                     <l:Grid class="sapUiTinyMarginTop sapUiNoContentPadding fullWidth gridNoMargin" defaultSpan="L6 M6 S6">
                         <HBox alignItems="Start" fitContainer="true" renderType="Bare" class="fullWidth paddingRight05rem" wrap="Wrap">
                             <Label text="Tipo Valorizz."/>
@@ -36,26 +25,22 @@
                             <Text class="sapUiTinyMarginBegin" text="{modelloDati>Numero_Serie}"/>
                         </HBox>
                     </l:Grid>
-                    <!-- <l:Grid class="sapUiTinyMarginTop sapUiNoContentPadding fullWidth gridNoMargin" defaultSpan="L6 M6 S6">
-                        <HBox class="sapUiTinyMarginTop" renderType="Bare" wrap="Wrap">
-                            <Label text="Quantità "/>
-                            <Text class="sapUiTinyMarginBegin" text="{modelloDati>Quantità} {modelloDati>Misura}" maxLines="1" wrapping="false" />
-                        </HBox>
-                    </l:Grid> -->
                     <l:Grid class="sapUiTinyMarginTop sapUiNoContentPadding fullWidth gridNoMargin" defaultSpan="L6 M6 S6">
                         <HBox class="sapUiTinyMarginTop" renderType="Bare" wrap="Wrap">
-                            <Label text="Quantità Odt"/>
+                            <Label text="Q.tà Impegnata "/>
                             <Text class="sapUiTinyMarginBegin" text="{modelloDati>Quantità} {modelloDati>Misura}" maxLines="1" wrapping="false" />
                         </HBox>
-                        <HBox class="sapUiTinyMarginTop" renderType="Bare" wrap="Wrap">
-                            <Label text="Quantità ricevuta"/>
-                            <Text class="sapUiTinyMarginBegin" text="{modelloDati>Q.tà Prelievo} {modelloDati>Misura}" maxLines="1" wrapping="false" />
+                        <HBox fitContainer="true" renderType="Bare" class="fullWidth paddingLeft05rem" wrap="Wrap">
+                            <Label text="Q.tà Prelievo"/>
+                            <Text class="sapUiTinyMarginBegin" text="{modelloDati>prelevata} {modelloDati>Misura}"/>
                         </HBox>
+                      
                     </l:Grid>
+
                     <!-- <HBox class="sapUiTinyMarginTop" renderType="Bare" wrap="Wrap">
-                    <Label text="Quantità "/>
-                    <Text class="sapUiTinyMarginBegin" text="{modelloDati>Quantità} {modelloDati>Misura}" maxLines="1" wrapping="false" />
-                </HBox> -->
+                <Label text="Quantità "/>
+                <Text class="sapUiTinyMarginBegin" text="{modelloDati>Quantità} {modelloDati>Misura}" maxLines="1" wrapping="false" />
+            </HBox> -->
 
                 </VBox>
                 <VBox alignItems="Start" class="vBoxButton">
